@@ -34,7 +34,7 @@ public class FXMLController {
     	String input= txtInput.getText();
     	String[] words= input.split(" ");
     	if(words.length==2) {
-    		if(!words[1].matches("[a-zA-Z]") || !words[0].matches("[a-zA-Z]")) {
+    		if(words[1].matches("[a-zA-Z]") || words[0].matches("[a-zA-Z]")) {
     			txtOutput.setText("Errore: non ci possono essere numeri o caratteri speciali");
     			txtInput.clear();
     			return;

@@ -12,7 +12,8 @@ public class AlienDictionary {
 	
 	public void addWord(String alienWord, String translation) {
 		if(parole.containsKey(alienWord.toLowerCase())) {
-			parole.replace(alienWord.toLowerCase(), translation.toLowerCase());
+			String significati= parole.get(alienWord.toLowerCase());
+			parole.replace(alienWord.toLowerCase(), significati + "\n"+translation.toLowerCase());
 		}
 		
 		else {
